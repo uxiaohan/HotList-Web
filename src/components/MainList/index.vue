@@ -10,7 +10,7 @@
       <div class="div_s">
         <div class="div_s-title">
           <div class="l">
-            <img :src="require(`@/assets/images/item-icon/${item}.png`)" />
+            <img :src="require(`@/assets/images/item-icon/${item}.png`)" alt="img" />
             <h3>{{ ListData[item]["title"] }}</h3>
           </div>
           <div class="r">
@@ -27,7 +27,7 @@
           </li>
         </ul>
       </div>
-      <div class="ref"><img src="@/assets/images/ref.jpg" @click="getDatas(item)" /></div>
+      <div class="ref"><img src="@/assets/images/ref.jpg" @click="getDatas(item)" alt="img" /></div>
     </div>
   </div>
 </template>
