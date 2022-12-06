@@ -1,5 +1,14 @@
 # hotlist-web
 
+### 使用说明
+
+https://www.vvhan.com/hotlist-web-vue.html
+
+### 后端接口
+
+https://api.vvhan.com/hotlist.html
+
+
 ## Project setup
 ```
 yarn install
