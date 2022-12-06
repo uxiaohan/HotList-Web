@@ -1,0 +1,31 @@
+{
+  "name": "hotlist-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "vbslint": "eslint . --ext .js,.ts,.vue --fix"
+  },
+  "dependencies": {
+    "axios": "^1.2.1",
+    "element-ui": "^2.15.12",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "@vbs/vue-cli-plugin-eslint": "~0.0.7",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "less": "^4.0.0",
+    "less-loader": "^8.0.0",
+    "prettier": "^2.5.1",
+    "prettier-plugin-two-style-order": "^1.0.1",
+    "vue-eslint-parser": "^8.3.0",
+    "vue-template-compiler": "^2.6.14"
+  }
+}

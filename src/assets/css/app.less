@@ -1,0 +1,40 @@
+.ⱦmain {
+  width: 95%;
+  max-width: 1350px;
+  margin: 0 auto 46px;
+
+  .ⱦtitle {
+    box-sizing: border-box;
+    margin-top: 58px;
+    color: #3b3b3b;
+    line-height: 72px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px -5px rgb(158 158 158 / 20%);
+    transition: 0.5s;
+    user-select: none;
+    &:hover {
+      color: #fff;
+      background-color: #0d0e53;
+      animation: title_ani 0.65s cubic-bezier(1, -1.91, 0, 2.79) 0s infinite normal both running;
+    }
+  }
+}
+@keyframes title_ani {
+  0% {
+    text-shadow: none;
+  }
+  25% {
+    text-shadow: -2px -2px 0 #ff0048, 2px 2px 0 #3234ff;
+  }
+  50% {
+    text-shadow: 2px -2px 0 #ff0048, -2px 2px 0 #3234ff;
+  }
+  75% {
+    text-shadow: -2px 2px 0 #ff0048, 2px -2px 0 #3234ff;
+  }
+  100% {
+    text-shadow: 2px 2px 0 #ff0048, -2px -2px 0 #3234ff;
+  }
+}
