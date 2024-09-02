@@ -15,11 +15,12 @@
           <DrawingPinIcon />
           <AlertTitle>公告</AlertTitle>
           <AlertDescription>
-            <p>今日热榜是聚合热榜热搜平台，汇集了各大网站的热榜信息，包括微博热搜、今日头条、知乎日报、澎湃新闻、虎扑步行街、36氪、哔哩哔哩热榜，知乎、IT资讯、虎嗅网、人人都是产品经理热榜百度、抖音热点豆瓣小组精选等。使用
+            <p>今日热榜是聚合热榜热搜平台，汇集了各大网站的热榜信息，包括微博热搜、今日头条、知乎日报、澎湃新闻、虎扑步行街、36氪、哔哩哔哩热榜，知乎、IT资讯、虎嗅网、人人都是产品经理、百度、抖音热点豆瓣小组精选等。使用
               <a class="git-link" href="https://api.vvhan.com/article/hotlist.html" target="_blank">韩小韩热榜API</a>
               ，可快速接入热榜数据，助力追踪全网热点。
             </p>
-            <p>开源地址: <a class="git-link" href="https://github.com/uxiaohan/HotList-Web" target="_blank">HotList-Web</a>
+            <p style="font-weight: bold;">开源地址: <a class="git-link" href="https://github.com/uxiaohan/HotList-Web"
+                target="_blank">HotList-Web</a>
             </p>
           </AlertDescription>
         </Alert>
@@ -47,6 +48,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import moment from 'moment'
 import { DrawingPinIcon } from '@radix-icons/vue'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import ListItem from '@/components/ListItem/ListItem.vue'
@@ -80,7 +82,10 @@ const vhInit = async () => {
     const { data } = await res.json()
     hotlistKey.value.forEach((i: any) => {
       const currentItem = data.find((item: any) => item.name == i.name)
-      currentItem && (i.data = currentItem.data)
+      if (currentItem) {
+        i.data = currentItem.data;
+        i.updateStr = formatTime(currentItem.update_time);
+      }
     })
   } catch (error) {
     toast({ description: '今日热榜 获取失败', variant: 'destructive' });
@@ -95,13 +100,22 @@ const refreshFn = async (item: any) => {
   updateStatus.value = true;
   item.data = [];
   const res = await fetch(`https://api.vvhan.com/api/hotlist/${item.key}`);
-  const { data } = await res.json()
+  const data = await res.json()
   await new Promise((r) => setTimeout(r, 666))
-  item.data = data
+  item.data = data.data;
+  item.updateStr = formatTime(data.update_time);
   toast({ title: 'Update', description: `${item.name} 更新成功`, });
   updateStatus.value = false;
 }
 vhInit()
+
+// 时间处理
+const formatTime = (time: string) => {
+  const targetDateTime = moment(time);
+  const now = moment();
+  const duration = moment.duration(now.diff(targetDateTime));
+  return `${duration.hours()}小时${duration.minutes()}分钟前`
+}
 
 </script>
 
