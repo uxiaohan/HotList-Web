@@ -11,3 +11,7 @@ https://www.vvhan.com/article/zhihu-baidu-weibo-api-kaiyuan.html
 https://api.vvhan.com/article/wbHot.html
 
 # 动动小手 点个Star
+
+### 页面截图
+
+![今日热榜](https://i0.wp.com/uxiaohan.github.io/v2/2024/09/1725265210.png)
