@@ -1,31 +1,46 @@
 {
-  "name": "hotlist-web",
-  "version": "0.1.0",
+  "name": "shadcn-vue",
+  "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "vbslint": "eslint . --ext .js,.ts,.vue --fix"
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "npm run build && wrangler pages dev ./dist",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/",
+    "deploy": "npm run build && wrangler pages deploy ./dist"
   },
   "dependencies": {
-    "axios": "^1.2.1",
-    "element-ui": "^2.15.12",
-    "vue": "^2.6.14"
+    "@radix-icons/vue": "^1.0.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "radix-vue": "^1.9.4",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.4.29"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.5",
-    "@babel/eslint-parser": "^7.17.0",
-    "@vbs/vue-cli-plugin-eslint": "~0.0.7",
-    "@vue/cli-service": "~5.0.0",
-    "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.5.0",
-    "less": "^4.0.0",
-    "less-loader": "^8.0.0",
-    "prettier": "^2.5.1",
-    "prettier-plugin-two-style-order": "^1.0.1",
-    "vue-eslint-parser": "^8.3.0",
-    "vue-template-compiler": "^2.6.14"
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.14.5",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "less": "^4.2.0",
+    "npm-run-all2": "^6.2.0",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.10",
+    "typescript": "~5.4.0",
+    "vite": "^5.3.1",
+    "vue-tsc": "^2.0.21",
+    "@cloudflare/workers-types": "^4.20240320.1",
+    "wrangler": "^3.37.0"
   }
 }

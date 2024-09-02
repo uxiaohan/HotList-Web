@@ -1,0 +1,163 @@
+// 字体文件
+@import url('./font.less');
+
+.www_vvhan_com {
+  padding: 56px 0 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: max-content;
+  user-select: none;
+
+  & > header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: max-content;
+    border-bottom: solid #e4e4e7 1px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    font-family: 'HarmonyOS Sans SC', sans-serif !important;
+    z-index: 6;
+
+    .main {
+      box-sizing: border-box;
+      padding: 0 16.66px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1666px;
+      height: 56px;
+
+      & > .logo {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: max-content;
+        height: 100%;
+        //   文字样式
+        font-size: 18px;
+        font-weight: bolder;
+
+        & > img {
+          height: 26px;
+          border-radius: 6px;
+          width: auto;
+          object-fit: contain;
+        }
+      }
+      & > h2 {
+        margin-left: auto;
+      }
+    }
+  }
+
+  & > main {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 16.66px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1666px;
+    height: 100%;
+    overflow: hidden;
+
+    & > header {
+      margin: 16px 0 36px;
+      width: 100%;
+      height: max-content;
+      font-family: 'HarmonyOS Sans SC', sans-serif !important;
+
+      .git-link {
+        color: #0969da;
+        transition: all 0.16s;
+
+        &:hover {
+          opacity: 0.88;
+        }
+      }
+    }
+
+    & > section.hotlist {
+      box-sizing: border-box;
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px 16px;
+      width: 100%;
+      height: max-content;
+    }
+  }
+
+  & > footer {
+    box-sizing: border-box;
+    padding: 68px 0 8px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+
+    & > p {
+      margin: 6px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      width: 100%;
+      height: max-content;
+      overflow: hidden;
+
+      & > a {
+        width: max-content;
+        height: 20px;
+        overflow: hidden;
+
+        & > img {
+          height: 20px;
+          max-height: 20px;
+          width: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+// 自适应
+
+@media screen and (max-width: 1488px) {
+  .www_vvhan_com {
+    & > main {
+      & > section.hotlist {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1188px) {
+  .www_vvhan_com {
+    & > main {
+      & > section.hotlist {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 818px) {
+  .www_vvhan_com {
+    & > main {
+      & > section.hotlist {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
