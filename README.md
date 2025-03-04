@@ -4,7 +4,7 @@
 
 ### 使用说明
 
-https://www.vvhan.com/article/zhihu-baidu-weibo-api-kaiyuan.html
+https://www.vvhan.com/article/zhihu-baidu-weibo-api-kaiyuan
 
 ### API接口
 
