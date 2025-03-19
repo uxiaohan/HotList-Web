@@ -72,7 +72,7 @@ const hotlistKey = ref<any[]>([
 // 初始化数据请求
 const vhInit = async () => {
   try {
-    const res = await fetch('https://hot-api.vvhan.com/v2?type=all')
+    const res = await fetch('https://hot-api.vhan.eu.org/v2?type=all')
     await new Promise((r) => setTimeout(r, 666))
     toast({ title: 'Init', description: '热榜获取成功' })
     const { data } = await res.json()
@@ -94,7 +94,7 @@ const refreshFn = async (item: any) => {
   if (updateStatus.value) return
   updateStatus.value = true
   item.data = []
-  const res = await fetch(`https://hot-api.vvhan.com/v2?type=${item.key}`)
+  const res = await fetch(`https://hot-api.vhan.eu.org/v2?type=${item.key}`)
   const data = await res.json()
   await new Promise((r) => setTimeout(r, 666))
   item.data = data.data
