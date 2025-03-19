@@ -15,3 +15,7 @@ https://api.vvhan.com/article/wbHot.html
 ### 页面截图
 
 ![今日热榜](https://i0.wp.com/uxiaohan.github.io/v2/2024/09/1725265210.png)
+
+## Stargazers over time
+
+![Stargazers over time](https://starchart.cc/uxiaohan/HotList-Web.svg?variant=adaptive)
