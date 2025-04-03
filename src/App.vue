@@ -55,6 +55,7 @@ const { toast } = useToast()
 const hotlistKey = ref<any[]>([
   { key: 'chongBluo', name: '虫部落', sub: '最新热门', data: [] },
   { key: 'wbHot', name: '微博', sub: '热搜榜', data: [] },
+  { key: 'wbNews', name: '微博', sub: '要闻', data: [] },
   { key: 'toutiao', name: '今日头条', sub: '热点', data: [] },
   { key: 'pengPai', name: '澎湃新闻', sub: '时事', data: [] },
   { key: 'zhihuHot', name: '知乎热榜', sub: '热度', data: [] },
@@ -77,7 +78,7 @@ const vhInit = async () => {
     toast({ title: 'Init', description: '热榜获取成功' })
     const { data } = await res.json()
     hotlistKey.value.forEach((i: any) => {
-      const currentItem = data.find((item: any) => item.name == i.name)
+      const currentItem = data.find((item: any) => item.name == i.name && item.subtitle == i.sub)
       if (currentItem) {
         i.data = currentItem.data
         i.updateStr = formatTime(currentItem.update_time)
