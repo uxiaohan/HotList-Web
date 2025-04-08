@@ -53,20 +53,21 @@ import { useToast } from '@/components/ui/toast/use-toast'
 const { toast } = useToast()
 // 热榜列表
 const hotlistKey = ref<any[]>([
-  { key: 'chongBluo', name: '虫部落', sub: '最新热门', data: [] },
-  { key: 'wbHot', name: '微博', sub: '热搜榜', data: [] },
-  { key: 'wbNews', name: '微博', sub: '要闻', data: [] },
   { key: 'toutiao', name: '今日头条', sub: '热点', data: [] },
   { key: 'pengPai', name: '澎湃新闻', sub: '时事', data: [] },
-  { key: 'zhihuHot', name: '知乎热榜', sub: '热度', data: [] },
-  { key: 'zhihuDay', name: '知乎日报', sub: '', data: [] },
-  { key: '36Ke', name: '36氪', sub: '24小时热榜', data: [] },
-  { key: 'baiduRD', name: '百度热点', sub: '指数', data: [] },
-  { key: 'douyinHot', name: '抖音', sub: '热点榜', data: [] },
   { key: 'qqNews', name: '腾讯新闻', sub: '热点榜', data: [] },
   { key: 'wyNews', name: '网易新闻', sub: '热点榜', data: [] },
-  { key: 'itNews', name: 'IT之家', sub: '最新资讯', data: [] },
+  { key: 'baiduRD', name: '百度热点', sub: '指数', data: [] },
+  { key: 'wbHot', name: '微博', sub: '热搜榜', data: [] },
+  { key: 'douyinHot', name: '抖音', sub: '热点榜', data: [] },
+  { key: 'zhihuHot', name: '知乎热榜', sub: '热度', data: [] },
+  { key: 'wbNews', name: '微博', sub: '要闻', data: [] },
   { key: 'huXiu', name: '虎嗅', sub: '最新资讯', data: [] },
+  { key: 'gcores', name: '机核', sub: '资讯', data: [] },
+  { key: 'zhihuDay', name: '知乎日报', sub: '', data: [] },
+  { key: '36Ke', name: '36氪', sub: '24小时热榜', data: [] },
+  { key: 'itNews', name: 'IT之家', sub: '最新资讯', data: [] },
+  { key: 'chongBluo', name: '虫部落', sub: '最新热门', data: [] },
   { key: 'woShiPm', name: 'woShiPm', sub: '热榜', data: [] }
 ])
 

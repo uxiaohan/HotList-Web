@@ -1,57 +1,68 @@
 section.list-item {
   position: relative;
   box-sizing: border-box;
-  padding: 0.75rem /* 12px -> .75rem */ 1.13rem /* 18px -> 1.13rem */ 0;
+  padding: 0.75rem
+    /* 12px -> .75rem */
+    1.13rem
+    /* 18px -> 1.13rem */
+    0;
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 288px;
+  height: 318px;
   border-radius: 6px;
   background-color: #fff;
-  box-shadow: 0px 0px 1.25rem /* 20px -> 1.25rem */ -0.31rem /* -5px -> -0.31rem */ rgb(158 158 158 / 20%);
+  box-shadow: 0px 0px 1.25rem
+    /* 20px -> 1.25rem */
+    -0.31rem
+    /* -5px -> -0.31rem */
+    rgb(158 158 158 / 20%);
   overflow: hidden;
 
-  & > header {
+  &>header {
+    flex-shrink: 0;
     padding-bottom: 12.66px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 25px;
+    height: 36px;
 
-    & > .l {
+    &>.l {
       display: flex;
       align-items: center;
       gap: 6px;
 
-      & > h3 {
+      &>h3 {
         font-family: 'HarmonyOS Sans SC Black', sans-serif !important;
         font-size: 16px;
       }
 
-      & > img {
+      &>img {
         height: 16px;
       }
     }
 
-    & > .r {
+    &>.r {
       font-size: 14px;
       font-family: 'HarmonyOS Sans SC Black', sans-serif !important;
     }
   }
 
-  & > main {
+  &>main {
     position: relative;
     box-sizing: border-box;
     flex: 1;
     width: 100%;
     height: 100%;
-    font-size: 0.88rem /* 14px -> .88rem */;
+    font-size: 0.88rem
+      /* 14px -> .88rem */
+    ;
     font-weight: normal;
     color: #282a2d;
     overflow: hidden;
 
-    & > .list {
+    &>.list {
       box-sizing: border-box;
       padding-right: 2px;
       width: 100%;
@@ -66,39 +77,41 @@ section.list-item {
         opacity: 1;
       }
 
-      & > .main-item {
+      &>.main-item {
         display: flex;
         justify-content: space-between;
 
         &:nth-of-type(1) {
-          & > a {
-            & > i {
+          &>a {
+            &>i {
               background: #f94e2f;
             }
           }
         }
 
         &:nth-of-type(2) {
-          & > a {
-            & > i {
+          &>a {
+            &>i {
               background: #fb8f34;
             }
           }
         }
 
         &:nth-of-type(3) {
-          & > a {
-            & > i {
+          &>a {
+            &>i {
               background: #f3c040;
             }
           }
         }
 
-        & > a {
-          margin-bottom: 0.5rem /* 8px -> .5rem */;
+        &>a {
+          margin-bottom: 0.5rem
+            /* 8px -> .5rem */
+          ;
           color: #000;
           font-family: 'HarmonyOS Sans SC', sans-serif !important;
-          font-size: 0.88rem /* 14px -> .88rem */;
+          font-size: 13.88px;
           word-wrap: break-word;
           line-height: 1.26rem;
           text-decoration: none;
@@ -109,13 +122,12 @@ section.list-item {
           transition: all 0.26s;
 
           &:hover {
-            // color: rgba(0, 0, 0, 0.56);
             color: #5e89ea;
             transform: translateX(2px);
           }
 
-          & > i {
-            margin-right: 0.5rem /* 8px -> .5rem */;
+          &>i {
+            margin-right: 0.5rem;
             display: inline-block;
             width: 18px;
             min-width: 18px;
@@ -130,7 +142,8 @@ section.list-item {
           }
         }
 
-        & > span {
+        &>span {
+          font-size: 12px;
           padding-left: 3px;
           width: max-content;
           color: #6c757d;
@@ -139,7 +152,7 @@ section.list-item {
       }
     }
 
-    & > .loading-pn {
+    &>.loading-pn {
       padding-top: 18px;
       position: absolute;
       left: 0;
@@ -159,7 +172,7 @@ section.list-item {
     }
   }
 
-  & > footer {
+  &>footer {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -175,7 +188,7 @@ section.list-item {
       pointer-events: auto;
     }
 
-    & > span {
+    &>span {
       font-size: 12px;
       font-weight: bold;
       color: #000;
@@ -183,21 +196,21 @@ section.list-item {
       opacity: 0.66;
     }
 
-    & > .refresh {
+    &>.refresh {
       margin-left: auto;
       margin-top: 3px;
       width: 20px;
       height: 20px;
       cursor: pointer;
 
-      & > svg {
+      &>svg {
         width: 12px;
         height: 12px;
         transition: all 0.6s;
       }
 
       &:hover {
-        & > svg {
+        &>svg {
           transform: rotate(166deg);
         }
       }
