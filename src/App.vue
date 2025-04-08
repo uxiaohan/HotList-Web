@@ -53,9 +53,6 @@ import { useToast } from '@/components/ui/toast/use-toast'
 const { toast } = useToast()
 // 热榜列表
 const hotlistKey = ref<any[]>([
-  { key: 'chongBluo', name: '虫部落', sub: '最新热门', data: [] },
-  { key: 'wbHot', name: '微博', sub: '热搜榜', data: [] },
-  { key: 'wbNews', name: '微博', sub: '要闻', data: [] },
   { key: 'toutiao', name: '今日头条', sub: '热点', data: [] },
   { key: 'pengPai', name: '澎湃新闻', sub: '时事', data: [] },
   { key: 'qqNews', name: '腾讯新闻', sub: '热点榜', data: [] },
