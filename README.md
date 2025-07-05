@@ -6,6 +6,10 @@
 
 https://www.vvhan.com/article/zhihu-baidu-weibo-api-kaiyuan
 
+### 使用 EdgeOne Pages 一键部署
+
+[![EdgeOne Pages 一键部署](https://cdnstatic.tencentcs.com/edgeone/pages/deploy.svg)](https://edgeone.ai/pages/new?repository-url=https://github.com/uxiaohan/HotList-Web)
+
 ### API接口
 
 https://api.vvhan.com/article/wbHot.html
